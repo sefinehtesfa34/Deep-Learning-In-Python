@@ -30,4 +30,4 @@ A common loss function for regression problems is the mean absolute error or MAE
 
 ##### The total MAE loss on a dataset is the mean of all these absolute differences.
 # N.B 
-<small>The</small> <em>loss function</em> <small>measures the disparity between the the target's true value and the value the model predicts.</small>
+<small>The</small> <h1><em>loss function</em> </h1><small>measures the disparity between the the target's true value and the value the model predicts.</small>
