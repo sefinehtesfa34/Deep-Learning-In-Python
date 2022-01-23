@@ -51,7 +51,9 @@ The learning rate and the size of the minibatches are the two parameters that ha
 (We'll explore these effects in the exercise.)
 <br>
 Fortunately, for most work it won't be necessary to do an extensive hyperparameter search to get satisfactory results. Adam is an SGD algorithm that has an adaptive learning rate that makes it suitable for most problems without any parameter tuning (it is "self tuning", in a sense). Adam is a great general-purpose optimizer.
-
+<br>
+<h1>Bear in mind!</h1>
+<strong>The learning rate and the size of the minibatches are the two parameters that have the largest effect on how the SGD training proceeds.</strong>
 
 
 
