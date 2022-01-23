@@ -43,7 +43,9 @@ We've described the problem we want the network to solve, but now we need to say
 ### 3. Finally, adjust the weights in a direction that makes the loss smaller.<br>
 
 
-
+# Learning Rate and Batch Size
+<br>
+Notice that the line only makes a small shift in the direction of each batch (instead of moving all the way). The size of <br>these shifts is determined by <h2> the learning rate.</h2> A smaller learning rate means the network needs to see more minibatches<br> before its weights converge to their best values.<br>
 
 
 
