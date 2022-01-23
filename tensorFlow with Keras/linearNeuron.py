@@ -1,4 +1,5 @@
-#Linear Neural Network
+
+#Tensorflow and keras for Neural Network
 from tensorflow import keras
 from tensorflow.keras import layers
 import matplotlib.pyplot as plt
