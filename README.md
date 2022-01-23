@@ -17,8 +17,8 @@ As with all machine learning tasks, we begin with a set of training data. Each e
 <br>
 ### <h1>In addition to the training data, we need two more things:</h1>
 <br>
-#### A "loss function" that measures how good the network's predictions are.
-#### An "optimizer" that can tell the network how to change its weights.
+==>A "loss function" that measures how good the network's predictions are.<br>
+==> An "optimizer" that can tell the network how to change its weights.<br>
 The Loss Function
 We've seen how to design an architecture for a network, but we haven't seen how to tell a network what problem to solve. This is the job of the loss function.
 <br>
