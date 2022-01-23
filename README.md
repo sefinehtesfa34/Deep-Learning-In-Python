@@ -55,7 +55,9 @@ Fortunately, for most work it won't be necessary to do an extensive hyperparamet
 <h1>Bear in mind!</h1>
 <strong>The learning rate and the size of the minibatches are the two parameters that have the largest effect on how the SGD training proceeds.</strong>
 
+# 2) Train Model
 
+Once you've defined the model and compiled it with a loss and optimizer you're ready for training. Train the network for 200 epochs with a batch size of 128. The input data is `X` with target `y`.
 
 
 
