@@ -59,7 +59,25 @@ Fortunately, for most work it won't be necessary to do an extensive hyperparamet
 
 Once you've defined the model and compiled it with a loss and optimizer you're ready for training. Train the network for 200 epochs with a batch size of 128. The input data is `X` with target `y`.
 <br>
+With the learning rate and the batch size, you have some control over:
+- How long it takes to train a model
+- How noisy the learning curves are
+- How small the loss becomes
 
+To get a better understanding of these two parameters, we'll look at the linear model, our ppsimplest neural network. Having only a single weight and a bias, it's easier to see what effect a change of parameter has.
+
+The next cell will generate an animation like the one in the tutorial. Change the values for `learning_rate`, `batch_size`, and `num_examples` (how many data points) and then run the cell. (It may take a moment or two.) Try the following combinations, or try some of your own:
+
+| `learning_rate` | `batch_size` | `num_examples` |
+|-----------------|--------------|----------------|
+| 0.05            | 32           | 256            |
+| 0.05            | 2            | 256            |
+| 0.05            | 128          | 256            |
+| 0.02            | 32           | 256            |
+| 0.2             | 32           | 256            |
+| 1.0             | 32           | 256            |
+| 0.9             | 4096         | 8192           |
+| 0.99            | 4096         | 8192           |
 
 
 
