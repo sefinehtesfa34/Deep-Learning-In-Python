@@ -1,6 +1,6 @@
 # Deep Learning with python
-#The main focus here is TensorFlow and Keras API for Neural Network
-#The Activation Function
+# The main focus here is TensorFlow and Keras API for Neural Network
+# The Activation Function
 It turns out, however, that two dense layers with nothing in between are no better than a single dense layer by itself. 
 Dense layers by themselves can never move us out of the world of lines and planes. 
 What we need is something nonlinear. What we need are activation functions.
