@@ -45,7 +45,7 @@ We've described the problem we want the network to solve, but now we need to say
 
 # Learning Rate and Batch Size
 <br>
-Notice that the line only makes a small shift in the direction of each batch (instead of moving all the way). The size of <br>these shifts is determined by <h2> the learning rate.</h2> A smaller learning rate means the network needs to see more minibatches<br> before its weights converge to their best values.<br>
+Notice that the line only makes a small shift in the direction of each batch (instead of moving all the way). The size of <br>these shifts is determined by <strong> the learning rate.</strong> A smaller learning rate means the network needs to see more minibatches<br> before its weights converge to their best values.<br>
 <br>
 The learning rate and the size of the minibatches are the two parameters that have the largest effect on how the SGD training proceeds.<br> Their interaction is often subtle and the right choice for these parameters isn't always obvious. <br>
 (We'll explore these effects in the exercise.)
