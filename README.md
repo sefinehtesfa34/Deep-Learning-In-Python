@@ -31,3 +31,27 @@ A common loss function for regression problems is <h1><em>the mean absolute erro
 ##### The total MAE loss on a dataset is the mean of all these absolute differences.
 # N.B 
 <small>The</small> <h1><em>loss function</em> </h1><small>measures the disparity between the the target's true value and the value the model predicts.</small>
+
+
+# <i>The Optimizer - Stochastic Gradient Descent</i><br>
+We've described the problem we want the network to solve, but now we need to say how to solve it. This is the job of the optimizer. The optimizer is an algorithm that adjusts the weights to minimize the loss.<br>
+
+## One step of training goes like this:
+
+### 1. Sample some training data and run it through the network to make predictions.<br>
+### 2. Measure the loss between the predictions and the true values.<br>
+### 3. Finally, adjust the weights in a direction that makes the loss smaller.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
