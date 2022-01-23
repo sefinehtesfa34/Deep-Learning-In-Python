@@ -26,7 +26,7 @@ The loss function measures the disparity between the the target's true value and
 <br>
 Different problems call for different loss functions. We have been looking at regression problems, where the task is to predict some numerical value -- calories in 80 Cereals, rating in Red Wine Quality. Other regression tasks might be predicting the price of a house or the fuel efficiency of a car.
 <br>
-A common loss function for regression problems is the mean absolute error or MAE. For each prediction y_pred, MAE measures the disparity from the true target y_true by an absolute difference abs(y_true - y_pred).
+A common loss function for regression problems is <h1><em>the mean absolute error or MAE</em></h1>. For each prediction y_pred, MAE measures the disparity from the true target y_true by an absolute difference abs(y_true - y_pred).
 
 ##### The total MAE loss on a dataset is the mean of all these absolute differences.
 # N.B 
