@@ -37,3 +37,8 @@ model = keras.Sequential([
     layers.Dense(1),
 ])
 model.compile(loss='mae',optimizer='adam')
+model.fit(X,y,epochs=200,batch_size=128)
+
+history_df = pd.DataFrame(history.history)
+# Start the plot at epoch 5. You can change this to get a different view.
+history_df.loc[5:, ['loss']].plot()
