@@ -83,6 +83,16 @@ The next cell will generate an animation like the one in the tutorial. Change th
 
 
 
+# 1) Define Model #
+
+The model we'll use this time will have both batch normalization and dropout layers. To ease reading we've broken the diagram into blocks, but you can define it layer by layer as usual.
+
+Define a model with an architecture given by this diagram:
+
+<figure style="padding: 1em;">
+<img src="https://i.imgur.com/V04o59Z.png" width="400" alt="Diagram of network architecture: BatchNorm, Dense, BatchNorm, Dropout, Dense, BatchNorm, Dropout, Dense.">
+<figcaption style="textalign: center; font-style: italic"><center>Diagram of a binary classifier.</center></figcaption>
+</figure>
 
 
 
