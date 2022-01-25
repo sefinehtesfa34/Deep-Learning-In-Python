@@ -95,4 +95,16 @@ Define a model with an architecture given by this diagram:
 </figure>
 
 
+# The Receptive Field #
 
+Trace back all the connections from some neuron and eventually you reach the input image. All of the input pixels a neuron is connected to is that neuron's **receptive field**. The receptive field just tells you which parts of the input image a neuron receives information from.
+
+As we've seen, if your first layer is a convolution with $3 \times 3$ kernels, then each neuron in that layer gets input from a $3 \times 3$ patch of pixels (except maybe at the border).
+
+What happens if you add another convolutional layer with $3 \times 3$ kernels? Consider this next illustration:
+
+<figure>
+<img src="https://i.imgur.com/HmwQm2S.png" alt="Illustration of the receptive field of two stacked convolutions." width=250>
+</figure>
+
+Now trace back the connections from the neuron at top and you can see that it's connected to a $5 \times 5$ patch of pixels in the input (the bottom layer): each neuron in the $3 \times 3$ patch in the middle layer is connected to a $3 \times 3$ input patch, but they overlap in a $5 \times 5$ patch. So that neuron at top has a $5 \times 5$ receptive field.
