@@ -139,7 +139,13 @@ How would you interpret these training curves? Did this model improve upon the m
 These exercises showed you how to design a custom convolutional network to solve a specific classification problem. Though most models these days will be built on top of a pretrained base, it certain circumstances a smaller custom convnet might still be preferable -- such as with a smaller or unusual dataset or when computing resources are very limited. As you saw here, for certain problems they can perform just as well as a pretrained model.
 
 
+# Image Classifications in keras API
+This short introduction uses [Keras](https://www.tensorflow.org/guide/keras/overview) to:
 
+1. Load a prebuilt dataset.
+1. Build a neural network machine learning model that classifies images.
+2. Train this neural network.
+3. Evaluate the accuracy of the model.
 
 
 
