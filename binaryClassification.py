@@ -1,5 +1,6 @@
 import pandas as pd
-
+from tensorflow import keras
+from tensorflow.keras import layers
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.impute import SimpleImputer
@@ -56,8 +57,42 @@ X_valid = preprocessor.transform(X_valid)
 
 input_shape = [X_train.shape[1]]
 
+# define the model given in the diagram
+model =keras.Sequential([
+    layers.BatchNormalization(input_shape=input_shape),
+    layers.Dense(units=256,activation='relu'),
+    layers.BatchNormalization(),
+    layers.Dropout(0.3),
+    layers.Dense(units=256,activation='relu'),
+    layers.BatchNormalization(),
+    layers.Dropout(0.3),
+    layers.Dense(units=1,activation="sigmoid"),
+    
+])
 
 
+# Add Optimizer, Loss, and Metric
+model.compile(optimizer="adam",
+              loss='binary_crossentropy',
+              metrics=['binary_accuracy'])
+#train the model and view the learning curves. 
+# It may run for around 60 to 70 epochs, which could take a minute or two.
+early_stopping = keras.callbacks.EarlyStopping(
+    patience=5,
+    min_delta=0.001,
+    restore_best_weights=True,
+)
+history = model.fit(
+    X_train, y_train,
+    validation_data=(X_valid, y_valid),
+    batch_size=512,
+    epochs=200,
+    callbacks=[early_stopping],
+)
+
+history_df = pd.DataFrame(history.history)
+history_df.loc[:, ['loss', 'val_loss']].plot(title="Cross-entropy")
+history_df.loc[:, ['binary_accuracy', 'val_binary_accuracy']].plot(title="Accuracy")
 
 
 

@@ -108,3 +108,61 @@ What happens if you add another convolutional layer with $3 \times 3$ kernels? C
 </figure>
 
 Now trace back the connections from the neuron at top and you can see that it's connected to a $5 \times 5$ patch of pixels in the input (the bottom layer): each neuron in the $3 \times 3$ patch in the middle layer is connected to a $3 \times 3$ input patch, but they overlap in a $5 \times 5$ patch. So that neuron at top has a $5 \times 5$ receptive field.
+# Computer Vision
+
+# Design a Convnet #
+
+Let's design a convolutional network with a block architecture like we saw in the tutorial. The model from the example had three blocks, each with a single convolutional layer. Its performance on the "Car or Truck" problem was okay, but far from what the pretrained VGG16 could achieve. It might be that our simple network lacks the ability to extract sufficiently complex features. We could try improving the model either by adding more blocks or by adding convolutions to the blocks we have.
+
+Let's go with the second approach. We'll keep the three block structure, but increase the number of `Conv2D` layer in the second block to two, and in the third block to three.
+
+<figure>
+<!-- <img src="./images/2-convmodel-2.png" width="250" alt="Diagram of a convolutional model."> -->
+<img src="https://i.imgur.com/Vko6nCK.png" width="250" alt="Diagram of a convolutional model.">
+</figure>
+
+# 1) Define Model #
+
+Given the diagram above, complete the model by defining the layers of the third block.
+
+# 2) Compile #
+
+To prepare for training, compile the model with an appropriate loss and accuracy metric for the "Car or Truck" dataset.
+## Finally, let's test the performance of this new model. First run this cell to fit the model to the training set.
+## And now run the cell below to plot the loss and metric curves for this training run.
+# 3) Train the Model #
+
+How would you interpret these training curves? Did this model improve upon the model from the tutorial?
+### This would indicate that it was prone to overfitting and in need of some regularization. The additional layer in our new model would make it even more prone to overfitting. However, adding some regularization with the Dropout layer helped prevent this. These changes improved the validation accuracy of the model by several points.
+
+# Conclusion
+These exercises showed you how to design a custom convolutional network to solve a specific classification problem. Though most models these days will be built on top of a pretrained base, it certain circumstances a smaller custom convnet might still be preferable -- such as with a smaller or unusual dataset or when computing resources are very limited. As you saw here, for certain problems they can perform just as well as a pretrained model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
