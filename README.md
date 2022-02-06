@@ -149,8 +149,46 @@ This short introduction uses [Keras](https://www.tensorflow.org/guide/keras/over
 
 
 
+#!/usr/bin/env python
+# coding: utf-8
 
+# # Implementing the Gradient Descent Algorithm
+# 
+# In this notebook, you'll be implementing the functions that build the gradient descent algorithm, namely:
+# 
+# * `sigmoid`: The sigmoid activation function.
+# * `output_formula`: The formula for the prediction.
+# * `error_formula`: The formula for the error at a point.
+# * `update_weights`: The function that updates the parameters with one gradient descent step.
+# 
+# Your goal is to find the boundary on a small dataset that has two classes:
+# 
+# ![auaghsga](points.png "test")
+# 
+# After you implement the gradient descent functions, be sure to run the `train` function. This will graph several of the lines that are drawn in successive gradient descent steps. It will also graph the error function, and you'll be able to see it decreasing as the number of epochs grows.
+# 
+# First, we'll start with some functions that will help us plot and visualize the data.
 
+# In[2]:
+# ## TODO: Implementing the basic functions
+# Here is your turn to shine. Implement the following formulas, as explained in the text.
+# - Sigmoid activation function
+# 
+# $$\sigma(x) = \frac{1}{1+e^{-x}}$$
+# 
+# - Output (prediction) formula
+# 
+# $$\hat{y} = \sigma(w_1 x_1 + w_2 x_2 + b)$$
+# 
+# - Error function
+# 
+# $$Error(y, \hat{y}) = - y \log(\hat{y}) - (1-y) \log(1-\hat{y})$$
+# 
+# - The function that updates the weights
+# 
+# $$ w_i \longrightarrow w_i + \alpha (y - \hat{y}) x_i$$
+# 
+# $$ b \longrightarrow b + \alpha (y - \hat{y})$$
 
 
 
