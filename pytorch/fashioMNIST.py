@@ -77,6 +77,19 @@ plt.imshow(img, cmap="gray")
 plt.show()
 print(f"Label: {label}")
 
+#Transforms to Tensor and to One-Hot Encoding of 
+# the features and the labels respectively
+
+from torchvision.transforms import ToTensor, Lambda
+
+ds = datasets.FashionMNIST(
+    root="data",
+    train=True,
+    download=True,
+    transform=ToTensor(),
+    target_transform=Lambda(lambda y: torch.zeros(10, dtype=torch.float).scatter_(0, torch.tensor(y), value=1))
+)
+
 
 
 
