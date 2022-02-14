@@ -163,7 +163,7 @@ This short introduction uses [Keras](https://www.tensorflow.org/guide/keras/over
 # 
 # Your goal is to find the boundary on a small dataset that has two classes:
 # 
-# ![auaghsga](points.png "test")
+#
 # 
 # After you implement the gradient descent functions, be sure to run the `train` function. This will graph several of the lines that are drawn in successive gradient descent steps. It will also graph the error function, and you'll be able to see it decreasing as the number of epochs grows.
 # 
